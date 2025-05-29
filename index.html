@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIHA RENTCAR - Solusi Sewa Mobil Profesional & Terpercaya di Pekanbaru</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Base body styles for font, background, and text color */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e2e8f0; /* Light slate background for a premium feel */
+            color: #1a202c; /* Darker text for strong contrast */
+            line-height: 1.6; /* Improved readability */
+            overflow-x: hidden; /* Prevent horizontal scroll caused by animations */
+        }
+
+        /* Custom scrollbar for better aesthetics across browsers */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #cbd5e1; /* Light gray track */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #475569; /* Medium gray thumb */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1e293b; /* Darker gray on hover */
+        }
+
+        /* Custom keyframe animation for the hero button's subtle pulse effect */
+        @keyframes pulse-grow {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); } /* Slightly less aggressive pulse */
+            100% { transform: scale(1); }
+        }
+        /* Apply the pulse animation to elements with this class */
+        .animate-pulse-grow {
+            animation: pulse-grow 2s infinite ease-in-out;
+        }
+
+        /* Subtle grid pattern for the hero section background - purely decorative */
+        .bg-pattern-grid {
+            background-image: linear-gradient(to right, #ffffff1a 1px, transparent 1px),
+                              linear-gradient(to bottom, #ffffff1a 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        /* --- New Animations for Scroll Reveal --- */
+
+        /* Fade In Up animation */
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fade-in-up 0.8s ease-out forwards;
+        }
+
+        /* Scale In animation */
+        @keyframes scale-in {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .animate-scale-in {
+            animation: scale-in 0.7s ease-out forwards;
+        }
+
+        /* Slide In Left animation */
+        @keyframes slide-in-left {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .animate-slide-in-left {
+            animation: slide-in-left 0.8s ease-out forwards;
+        }
+
+        /* Slide In Right animation */
+        @keyframes slide-in-right {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .animate-slide-in-right {
+            animation: slide-in-right 0.8s ease-out forwards;
+        }
+
+        /* Initial hidden state for elements that will animate */
+        .animated-element {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-gradient-to-r from-blue-800 to-indigo-900 text-white p-6 shadow-2xl rounded-b-3xl animated-element animate-fade-in-up">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="text-5xl font-extrabold mb-4 md:mb-0 tracking-tight">KIHA RENTCAR</div>
+            <nav class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-xl font-medium">
+                <a href="#home" class="hover:text-blue-200 transition duration-300 transform hover:scale-105">Beranda</a>
+                <a href="#armada" class="hover:text-blue-200 transition duration-300 transform hover:scale-105">Armada</a>
+                <a href="#keunggulan" class="hover:text-blue-200 transition duration-300 transform hover:scale-105">Keunggulan</a>
+                <a href="#harga" class="hover:text-blue-200 transition duration-300 transform hover:scale-105">Harga</a>
+                <a href="#kontak" class="hover:text-blue-200 transition duration-300 transform hover:scale-105">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="relative bg-gradient-to-br from-blue-700 to-indigo-800 h-[600px] flex items-center justify-center text-white text-center rounded-3xl mx-8 mt-8 shadow-2xl overflow-hidden">
+        <div class="absolute inset-0 bg-pattern-grid opacity-10 z-0"></div>
+        <div class="absolute inset-0 bg-black opacity-50 z-0"></div>
+        
+        <div class="relative z-10 p-8 max-w-5xl mx-auto">
+            <h1 class="text-6xl md:text-8xl font-black mb-8 leading-tight drop-shadow-xl animated-element animate-fade-in-up" style="animation-delay: 0.2s;">
+                Solusi Perjalanan Terbaik di <span class="text-yellow-400">Pekanbaru</span>
+            </h1>
+            <p class="text-2xl md:text-3xl mb-12 max-w-3xl mx-auto font-light drop-shadow-md animated-element animate-fade-in-up" style="animation-delay: 0.4s;">
+                KIHA RENTCAR menyediakan armada mobil premium, terawat, dan pelayanan prima untuk setiap petualangan Anda.
+            </p>
+            <a href="#armada" class="inline-block bg-yellow-400 text-blue-900 font-extrabold py-5 px-12 rounded-full shadow-xl transition duration-300 transform hover:scale-105 hover:bg-yellow-300 animate-pulse-grow text-2xl animated-element animate-fade-in-up" style="animation-delay: 0.6s;">
+                Jelajahi Armada Kami
+            </a>
+        </div>
+    </section>
+
+    <section id="armada" class="py-24 bg-white rounded-3xl mx-8 mt-12 shadow-2xl">
+        <div class="container mx-auto px-8">
+            <h2 class="text-5xl font-extrabold text-center mb-16 text-blue-900 animated-element animate-fade-in-up">Armada Pilihan Premium Kami</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <div class="bg-gray-50 p-8 rounded-3xl shadow-lg border border-gray-100 hover:shadow-xl transition duration-300 transform hover:-translate-y-3 animated-element animate-scale-in" style="animation-delay: 0.2s;">
+                    <img src="https://placehold.co/800x500/0f172a/e2e8f0?text=Toyota+Avanza+Terbaru" alt="Toyota Avanza" class="w-full h-56 object-cover rounded-2xl mb-6 shadow-md border border-gray-200">
+                    <h3 class="text-3xl font-bold mb-3 text-blue-800">Toyota Avanza / Daihatsu Xenia</h3>
+                    <p class="text-gray-700 mb-5 leading-relaxed">Mobil keluarga yang modern, nyaman, dan efisien. Pilihan sempurna untuk perjalanan dalam kota maupun luar kota.</p>
+                    <div class="flex flex-col sm:flex-row justify-between items-center pt-6 border-t border-gray-200">
+                        <span class="text-3xl font-extrabold text-green-700 mb-3 sm:mb-0">Rp 300.000<span class="text-xl font-normal text-gray-500">/hari</span></span>
+                        <a href="https://wa.me/6281372973734" target="_blank" class="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-8 rounded-full text-lg shadow-md transition duration-300 transform hover:scale-105">Sewa Sekarang</a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-3xl shadow-lg border border-gray-100 hover:shadow-xl transition duration-300 transform hover:-translate-y-3 animated-element animate-scale-in" style="animation-delay: 0.4s;">
+                    <img src="https://placehold.co/800x500/0f172a/e2e8f0?text=Toyota+Innova+Reborn" alt="Toyota Innova" class="w-full h-56 object-cover rounded-2xl mb-6 shadow-md border border-gray-200">
+                    <h3 class="text-3xl font-bold mb-3 text-blue-800">Toyota Innova</h3>
+                    <p class="text-gray-700 mb-5 leading-relaxed">Kenyamanan premium dengan ruang kabin yang luas dan fitur modern, ideal untuk perjalanan jauh bersama keluarga atau rekan kerja.</p>
+                    <div class="flex flex-col sm:flex-row justify-between items-center pt-6 border-t border-gray-200">
+                        <span class="text-3xl font-extrabold text-green-700 mb-3 sm:mb-0">Rp 450.000<span class="text-xl font-normal text-gray-500">/hari</span></span>
+                        <a href="https://wa.me/6281372973734" target="_blank" class="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-8 rounded-full text-lg shadow-md transition duration-300 transform hover:scale-105">Sewa Sekarang</a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-3xl shadow-lg border border-gray-100 hover:shadow-xl transition duration-300 transform hover:-translate-y-3 animated-element animate-scale-in" style="animation-delay: 0.6s;">
+                    <img src="https://placehold.co/800x500/0f172a/e2e8f0?text=Fortuner+Pajero+Sport" alt="Fortuner / Pajero Sport" class="w-full h-56 object-cover rounded-2xl mb-6 shadow-md border border-gray-200">
+                    <h3 class="text-3xl font-bold mb-3 text-blue-800">Toyota Fortuner / Mitsubishi Pajero Sport</h3>
+                    <p class="text-gray-700 mb-5 leading-relaxed">SUV tangguh dan mewah, memberikan pengalaman berkendara yang premium, aman, dan penuh gaya untuk segala medan.</p>
+                    <div class="flex flex-col sm:flex-row justify-between items-center pt-6 border-t border-gray-200">
+                        <span class="text-3xl font-extrabold text-green-700 mb-3 sm:mb-0">Rp 800.000<span class="text-xl font-normal text-gray-500">/hari</span></span>
+                        <a href="https://wa.me/6281372973734" target="_blank" class="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-8 rounded-full text-lg shadow-md transition duration-300 transform hover:scale-105">Sewa Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="keunggulan" class="py-24 bg-gradient-to-br from-blue-700 to-indigo-800 text-white rounded-3xl mx-8 mt-12 shadow-2xl">
+        <div class="container mx-auto px-8 text-center">
+            <h2 class="text-5xl font-extrabold mb-16 animated-element animate-fade-in-up">Mengapa KIHA RENTCAR Adalah Pilihan Terbaik Anda?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="flex flex-col items-center p-8 bg-white bg-opacity-15 rounded-2xl shadow-lg transform hover:scale-105 transition duration-300 border border-white border-opacity-20 animated-element animate-scale-in" style="animation-delay: 0.2s;">
+                    <svg class="w-24 h-24 mb-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <h3 class="text-3xl font-bold mb-4">Armada Terawat & Modern</h3>
+                    <p class="text-lg leading-relaxed opacity-90">Nikmati perjalanan tanpa khawatir dengan mobil-mobil terbaru kami yang selalu dalam kondisi prima, bersih, dan terawat secara rutin.</p>
+                </div>
+                <div class="flex flex-col items-center p-8 bg-white bg-opacity-15 rounded-2xl shadow-lg transform hover:scale-105 transition duration-300 border border-white border-opacity-20 animated-element animate-scale-in" style="animation-delay: 0.4s;">
+                    <svg class="w-24 h-24 mb-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                    <h3 class="text-3xl font-bold mb-4">Pelayanan Prima & Ramah</h3>
+                    <p class="text-lg leading-relaxed opacity-90">Tim profesional kami siap melayani Anda dengan sepenuh hati, memastikan proses sewa yang cepat, mudah, dan menyenangkan.</p>
+                </div>
+                <div class="flex flex-col items-center p-8 bg-white bg-opacity-15 rounded-2xl shadow-lg transform hover:scale-105 transition duration-300 border border-white border-opacity-20 animated-element animate-scale-in" style="animation-delay: 0.6s;">
+                    <svg class="w-24 h-24 mb-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                    </svg>
+                    <h3 class="text-3xl font-bold mb-4">Harga Transparan & Kompetitif</h3>
+                    <p class="text-lg leading-relaxed opacity-90">Dapatkan penawaran harga terbaik tanpa biaya tersembunyi. Kami menjamin transparansi untuk setiap transaksi Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="harga" class="py-24 bg-blue-50 rounded-3xl mx-8 mt-12 shadow-2xl">
+        <div class="container mx-auto px-8">
+            <h2 class="text-5xl font-extrabold text-center mb-16 text-blue-900 animated-element animate-fade-in-up">Daftar Harga Sewa Terbaik</h2>
+            <div class="overflow-x-auto bg-white rounded-2xl shadow-lg border border-blue-100 animated-element animate-fade-in-up" style="animation-delay: 0.2s;">
+                <table class="min-w-full divide-y divide-blue-200">
+                    <thead class="bg-blue-700 text-white">
+                        <tr>
+                            <th class="py-5 px-8 text-left text-xl font-semibold tracking-wider">Jenis Mobil</th>
+                            <th class="py-5 px-8 text-left text-xl font-semibold tracking-wider">Harga Sewa (Per Hari)</th>
+                            <th class="py-5 px-8 text-left text-xl font-semibold tracking-wider">Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-blue-100">
+                        <tr class="hover:bg-blue-100 transition duration-150">
+                            <td class="py-6 px-8 text-lg font-medium">Toyota Avanza / Daihatsu Xenia</td>
+                            <td class="py-6 px-8 text-2xl font-bold text-green-700">Rp 300.000</td>
+                            <td class="py-6 px-8 text-md text-gray-700">Lepas Kunci (syarat & ketentuan berlaku)</td>
+                        </tr>
+                        <tr class="hover:bg-blue-100 transition duration-150">
+                            <td class="py-6 px-8 text-lg font-medium">Toyota Innova</td>
+                            <td class="py-6 px-8 text-2xl font-bold text-green-700">Rp 450.000</td>
+                            <td class="py-6 px-8 text-md text-gray-700">Lepas Kunci (syarat & ketentuan berlaku)</td>
+                        </tr>
+                        <tr class="hover:bg-blue-100 transition duration-150">
+                            <td class="py-6 px-8 text-lg font-medium">Toyota Fortuner / Mitsubishi Pajero Sport</td>
+                            <td class="py-6 px-8 text-2xl font-bold text-green-700">Rp 800.000</td>
+                            <td class="py-6 px-8 text-md text-gray-700">Dengan Driver (harga belum termasuk bensin & makan driver)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-center text-gray-600 mt-12 text-base animated-element animate-fade-in-up" style="animation-delay: 0.4s;">
+                *Harga di atas adalah estimasi dan dapat berubah sewaktu-waktu. Untuk penawaran terbaik dan ketersediaan armada, silakan hubungi kami.
+            </p>
+        </div>
+    </section>
+
+    <section id="tentang" class="py-24 bg-white rounded-3xl mx-8 mt-12 shadow-2xl">
+        <div class="container mx-auto px-8 text-center">
+            <h2 class="text-5xl font-extrabold mb-12 text-blue-900 animated-element animate-fade-in-up">Tentang KIHA RENTCAR</h2>
+            <div class="max-w-5xl mx-auto">
+                <p class="text-lg leading-relaxed text-gray-700 mb-8 animated-element animate-fade-in-up" style="animation-delay: 0.2s;">
+                    KIHA RENTCAR adalah penyedia layanan sewa mobil terkemuka di Pekanbaru, Riau, yang berdedikasi untuk memberikan pengalaman perjalanan yang tak terlupakan. Kami memahami bahwa setiap perjalanan memiliki kebutuhan unik, oleh karena itu kami menawarkan beragam pilihan armada mobil modern yang siap memenuhi ekspektasi Anda.
+                </p>
+                <p class="text-lg leading-relaxed text-gray-700 animated-element animate-fade-in-up" style="animation-delay: 0.4s;">
+                    Dikelola dengan penuh integritas dan profesionalisme oleh **KIHA Family**, kami berkomitmen untuk selalu mengutamakan kepuasan pelanggan. Mulai dari proses pemesanan yang mudah, kondisi mobil yang prima, hingga dukungan pelanggan yang responsif, kami memastikan setiap aspek layanan kami dirancang untuk kenyamanan dan ketenangan pikiran Anda. Percayakan kebutuhan transportasi Anda kepada KIHA RENTCAR, mitra perjalanan terbaik Anda di Pekanbaru.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="py-24 bg-blue-800 text-white rounded-3xl mx-8 mt-12 shadow-2xl">
+        <div class="container mx-auto px-8 text-center">
+            <h2 class="text-5xl font-extrabold mb-8 animated-element animate-fade-in-up">Siap Memulai Perjalanan Anda?</h2>
+            <p class="text-2xl font-light mb-8 animated-element animate-fade-in-up" style="animation-delay: 0.2s;">Hubungi KIHA RENTCAR sekarang untuk penawaran terbaik dan ketersediaan armada di Pekanbaru.</p>
+            <p class="text-5xl font-bold mb-10 tracking-wide animated-element animate-fade-in-up" style="animation-delay: 0.4s;">
+                Telepon/WhatsApp: <a href="tel:+6281372973734" class="underline hover:text-yellow-400 transition duration-300">081372973734</a>
+            </p>
+            <p class="text-xl mb-12 animated-element animate-fade-in-up" style="animation-delay: 0.6s;">Lokasi: Pekanbaru, Riau</p>
+            <a href="https://wa.me/6281372973734" target="_blank" class="inline-block bg-yellow-400 text-blue-900 font-extrabold py-5 px-14 rounded-full shadow-2xl transition duration-300 transform hover:scale-105 hover:bg-yellow-300 text-2xl animated-element animate-fade-in-up" style="animation-delay: 0.8s;">
+                <svg class="inline-block w-7 h-7 mr-3 -mt-1" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.5 3.42 1.46 4.88l-1.5 5.5 5.61-1.46c1.38.76 2.97 1.16 4.54 1.16 5.46 0 9.91-4.45 9.91-9.91s-4.45-9.91-9.91-9.91zm.04 1.59c4.61 0 8.35 3.74 8.35 8.35 0 4.61-3.74 8.35-8.35 8.35-1.44 0-2.8-.36-4.01-1.01l-2.9 1.16 1.18-2.85c-.7-1.19-1.07-2.55-1.07-3.95 0-4.61 3.74-8.35 8.35-8.35zm-2.12 4.6l-.16.08c-.28.14-.54.29-.75.46-.2.17-.37.36-.5.56-.13.2-.23.42-.3.64-.07.22-.1.46-.07.7.03.24.13.47.27.68.14.2.3.39.49.56.19.17.4.32.63.45.22.13.46.24.7.32.24.08.49.12.75.12.26 0 .5-.04.73-.1.23-.06.45-.16.65-.29.2-.13.37-.29.5-.47.13-.18.23-.38.28-.6.05-.22.06-.45.03-.68-.03-.23-.1-.45-.2-.64-.1-.19-.24-.36-.4-.5-.16-.14-.35-.25-.56-.34-.21-.09-.44-.13-.67-.13-.23 0-.46.04-.67.12z"/>
+                </svg>
+                WhatsApp Sekarang
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-300 p-10 mt-12 rounded-t-3xl">
+        <div class="container mx-auto text-center text-base">
+            <p>&copy; 2025 KIHA RENTCAR. Semua Hak Dilindungi.</p>
+            <p class="mt-3">Dikelola dengan bangga oleh KIHA Family.</p>
+            <p class="mt-1">Melayani kebutuhan transportasi Anda di Pekanbaru dengan profesionalisme dan kepercayaan.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Select all elements that should animate on scroll
+            const animatedElements = document.querySelectorAll('.animated-element');
+
+            // Options for the Intersection Observer
+            const observerOptions = {
+                root: null, // Use the viewport as the root
+                rootMargin: '0px',
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            };
+
+            // Callback function for the Intersection Observer
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // If element is in viewport, add the animation class
+                        const animationClass = entry.target.classList.contains('animate-scale-in') ? 'animate-scale-in' : 'animate-fade-in-up';
+                        entry.target.classList.add(animationClass);
+                        // Stop observing once animated
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+
+            // Create an Intersection Observer instance
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+            // Observe each animated element
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
+
+            // Special handling for staggered animations (e.g., car cards, benefit cards)
+            // This ensures they are initially hidden and then revealed by JS
+            const staggeredElements = document.querySelectorAll('#armada .animated-element, #keunggulan .animated-element');
+            staggeredElements.forEach(element => {
+                element.style.opacity = '0'; // Ensure they are hidden before animation
+            });
+
+            // Initial animation for header and hero section elements that are always visible
+            // These don't need Intersection Observer as they are visible on load
+            document.querySelector('header').classList.add('animate-fade-in-up');
+            document.querySelector('#home h1').classList.add('animate-fade-in-up');
+            document.querySelector('#home p').classList.add('animate-fade-in-up');
+            document.querySelector('#home a').classList.add('animate-fade-in-up');
+        });
+    </script>
+</body>
+</html>
